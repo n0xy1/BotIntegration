@@ -113,11 +113,11 @@ playerList.onGameEvent = function(eventName,arg1,arg2,arg3,arg4,arg5,arg6,arg7)
         if net.get_player_info(arg1) ~= nil then
             local initiatorDetails = net.get_player_info(arg1)
             eventData.Initiator = initiatorDetails.name
+            eventData.InitiatorCoalition = initiatorDetails.side
         else    
             eventData.Initiator = "AI"
         end
-        eventData.InitiatorCoalition = arg3
-
+        
         --weapon/misc
         eventData.id = 9
         eventData.Time = 1.1
@@ -131,10 +131,11 @@ playerList.onGameEvent = function(eventName,arg1,arg2,arg3,arg4,arg5,arg6,arg7)
         if net.get_player_info(arg1) ~= nil then
             local playerDetails = net.get_player_info(arg1)
             eventData.Initiator = playerDetails.name
+            eventData.InitiatorCoalition = playerDetails.side
         else    
             eventData.Initiator = "AI"
         end
-        eventData.InitiatorCoalition = arg3
+        eventData.homeBase = arg3
 
         --weapons/misc
         eventData.id = 5
@@ -149,10 +150,11 @@ playerList.onGameEvent = function(eventName,arg1,arg2,arg3,arg4,arg5,arg6,arg7)
         if net.get_player_info(arg1) ~= nil then
             local playerDetails = net.get_player_info(arg1)
             eventData.Initiator = playerDetails.name
+            eventData.InitiatorCoalition = playerDetails.side
         else    
             eventData.Initiator = "AI"
         end
-        eventData.InitiatorCoalition = arg3
+        eventData.homeBase = arg3
         
         --weapon/misc
         eventData.id = 6
@@ -167,10 +169,11 @@ playerList.onGameEvent = function(eventName,arg1,arg2,arg3,arg4,arg5,arg6,arg7)
         if net.get_player_info(arg1) ~= nil then
             local playerDetails = net.get_player_info(arg1)
             eventData.Initiator = playerDetails.name
+            eventData.InitiatorCoalition = playerDetails.side
         else    
             eventData.Initiator = "AI"
         end
-        eventData.InitiatorCoalition = arg3
+        eventData.homebase = arg3
 
         --weapon/misc
         eventData.id = 3
@@ -185,11 +188,11 @@ playerList.onGameEvent = function(eventName,arg1,arg2,arg3,arg4,arg5,arg6,arg7)
         if net.get_player_info(arg1) ~= nil then
             local playerDetails = net.get_player_info(arg1)
             eventData.Initiator = playerDetails.name
+            eventData.InitiatorCoalition = playerDetails.side
         else    
             eventData.Initiator = "AI"
         end
-        eventData.InitiatorCoalition = arg3
-        
+        eventData.homebase = arg3
         --weapon/misc
         eventData.id = 4
         eventData.Time = 1.1
